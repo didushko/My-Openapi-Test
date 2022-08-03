@@ -56,7 +56,7 @@ audit:
         issue_id:
             - v4-global-security
             #- "*schema*"
-        #score: 70
+        score: 70
         score:
             data: 0
             security: 0
