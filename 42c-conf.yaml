@@ -1,0 +1,66 @@
+audit:
+  branches:
+    '**':
+      discovery: 
+        search:     
+         - '**/*.json'
+        #  - '**/Pixi-oas.json'
+         - '**/*.yaml'
+        #  - '!**/*.yml'
+         # - '!**/Pixi_3.0_Ref.json'
+         # - '!**/hub-psd2.json' 
+         # - '!node_modules/**'
+         # - '!hub-psd2.json'
+      #mapping:
+       #oas/Pixi-oas.json: f721a245-b8d3-42f3-b3b6-9c2004eadf71
+       # Pixi_2.0.json: 3401c3f2-99b9-45db-a321-722d25aecc5d
+      fail_on:
+        invalid_contract: true
+        issue_id:
+            - v4-global-security
+            #- "*schema*"
+        #score: 50
+        score:
+          data: 65
+          security: 10
+        #severity: medium
+        severity:
+           data: critical
+           security: critical
+    
+       
+  tags:
+    '**':
+      discovery:
+        search:
+          - '**/*.json'
+          - '!**/*.yaml'
+          - '!**/*.yml'
+          - '!**/Pixi_3.0_Ref.json'
+          - '!**/hub-psd2.json' 
+          - '!node_modules/**'
+          - '!hub-psd2.json'
+        
+  prs:
+    '**':
+      discovery:
+        search:
+          - 'oas/**/*.json'
+          - '!oas/**/*.yaml'
+          - '!oas/**/*.yml'
+          - '5GC_APIs/TS29122_AsSessionWithQoS.yaml'
+          - '!ignore/**'
+          
+      fail_on:
+        invalid_contract: true
+        issue_id:
+            - v4-global-security
+            #- "*schema*"
+        #score: 70
+        score:
+            data: 0
+            security: 0
+        #severity: medium
+        severity:
+           data: critical
+           security: critical

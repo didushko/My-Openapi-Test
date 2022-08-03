@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Github Action 42Crunch REST API Static Security Testing
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: 42Crunch/api-security-audit-action@v2
+      with:
+        api-token: ${{ secrets.API_TOKEN }}
+        min-score: 75
+        platform-url: https://platform.dev.42crunch.com
+        log-level: DEBUG
+        share-everyone: READ_WRITE
