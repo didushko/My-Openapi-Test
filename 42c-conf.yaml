@@ -29,38 +29,38 @@ audit:
            security: critical
     
        
-  tags:
-    '**':
-      discovery:
-        search:
-          - '**/*.json'
-          - '!**/*.yaml'
-          - '!**/*.yml'
-          - '!**/Pixi_3.0_Ref.json'
-          - '!**/hub-psd2.json' 
-          - '!node_modules/**'
-          - '!hub-psd2.json'
+  # tags:
+  #   '**':
+  #     discovery:
+  #       search:
+  #         - '**/*.json'
+  #         - '!**/*.yaml'
+  #         - '!**/*.yml'
+  #         - '!**/Pixi_3.0_Ref.json'
+  #         - '!**/hub-psd2.json' 
+  #         - '!node_modules/**'
+  #         - '!hub-psd2.json'
         
-  prs:
-    '**':
-      discovery:
-        search:
-          - 'oas/**/*.json'
-          - '!oas/**/*.yaml'
-          - '!oas/**/*.yml'
-          - '5GC_APIs/TS29122_AsSessionWithQoS.yaml'
-          - '!ignore/**'
+  # prs:
+  #   '**':
+  #     discovery:
+  #       search:
+  #         - 'oas/**/*.json'
+  #         - '!oas/**/*.yaml'
+  #         - '!oas/**/*.yml'
+  #         - '5GC_APIs/TS29122_AsSessionWithQoS.yaml'
+  #         - '!ignore/**'
           
-      fail_on:
-        invalid_contract: true
-        issue_id:
-            - v4-global-security
-            #- "*schema*"
-        score: 70
-        # score:
-            # data: 0
-            # security: 0
-        #severity: medium
-        severity:
-           data: critical
-           security: critical
+      # fail_on:
+      #   invalid_contract: true
+      #   issue_id:
+      #       - v4-global-security
+      #       #- "*schema*"
+      #   score: 70
+      #   # score:
+      #       # data: 0
+      #       # security: 0
+      #   #severity: medium
+      #   severity:
+      #      data: critical
+      #      security: critical
