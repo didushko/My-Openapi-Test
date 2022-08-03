@@ -2,9 +2,7 @@
 
 name: Github Action 42Crunch REST API Static Security Testing
 
-on:
-  push:
-    branches: [ master ]
+on: push
 
 jobs:
   audit:
