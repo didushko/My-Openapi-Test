@@ -21,8 +21,8 @@ audit:
             #- "*schema*"
         #score: 50
         score:
-          data: 65
-          security: 10
+          data: 10
+          security: 0
         #severity: medium
         severity:
            data: critical
