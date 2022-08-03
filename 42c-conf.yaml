@@ -57,9 +57,9 @@ audit:
             - v4-global-security
             #- "*schema*"
         score: 70
-        score:
-            data: 0
-            security: 0
+        # score:
+            # data: 0
+            # security: 0
         #severity: medium
         severity:
            data: critical
