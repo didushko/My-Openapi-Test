@@ -5,7 +5,7 @@ schemes:
 host: xkcd.com
 basePath: /
 info:
-  description: "Webcomic of romance, sarcasm, math, and language."
+  description: "Webcomicc of romance, sarcasm, math, and language."
   title: XKCD
   version: 1.0.0
   x-apisguru-categories:
