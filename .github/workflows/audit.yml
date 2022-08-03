@@ -16,4 +16,4 @@ jobs:
         min-score: 75
         platform-url: https://platform.dev.42crunch.com
         log-level: DEBUG
-        share-everyone: READ_WRITE
+        # share-everyone: READ_WRITE
