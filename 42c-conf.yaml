@@ -27,7 +27,6 @@ audit:
         severity:
            data: critical
            security: critical
-      writeJsonReportTo: "testReport.json"
     
        
   # tags:
