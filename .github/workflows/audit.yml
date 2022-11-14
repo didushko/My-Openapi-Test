@@ -17,3 +17,4 @@ jobs:
         platform-url: https://platform.dev.42crunch.com
         log-level: DEBUG
         share-everyone: READ_WRITE
+        api-tags: SecurityQualityGatesTags:secondTag CustomizationRulesTags:anotherTag
