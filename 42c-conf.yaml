@@ -14,9 +14,9 @@ audit:
       #mapping:
        #oas/Pixi-oas.json: f721a245-b8d3-42f3-b3b6-9c2004eadf71
        # Pixi_2.0.json: 3401c3f2-99b9-45db-a321-722d25aecc5d
-       api_tags:
-        - 'SecurityQualityGatesTags:firstTag'
-        - 'SecurityQualityGatesTags:secondTag'
+      api_tags:
+       - 'SecurityQualityGatesTags:firstTag'
+       - 'SecurityQualityGatesTags:secondTag'
       fail_on:
         invalid_contract: true
         issue_id:
