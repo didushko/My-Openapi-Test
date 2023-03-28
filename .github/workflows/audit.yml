@@ -14,7 +14,7 @@ jobs:
       with:
         api-token: ${{ secrets.API_TOKEN }}
         min-score: 75
-        platform-url: https://platform.dev.42crunch.com
+        platform-url: https://platform.42crunch.com
         log-level: DEBUG
         share-everyone: READ_WRITE
         api-tags: SecurityQualityGatesTags:secondTag CustomizationRulesTags:anotherTag
