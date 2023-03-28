@@ -10,12 +10,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: didushko/api-security-audit-action@api_tags
+    - uses: 42Crunch/api-security-audit-action@v1
       with:
         api-token: ${{ secrets.API_TOKEN }}
         min-score: 75
-        platform-url: https://platform.42crunch.com
         log-level: DEBUG
         json-report: report.json
         share-everyone: READ_WRITE
-        api-tags: SecurityQualityGatesTags:secondTag CustomizationRulesTags:anotherTag
