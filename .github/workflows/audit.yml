@@ -16,5 +16,6 @@ jobs:
         min-score: 75
         platform-url: https://platform.42crunch.com
         log-level: DEBUG
+        json-report: report.json
         share-everyone: READ_WRITE
         api-tags: SecurityQualityGatesTags:secondTag CustomizationRulesTags:anotherTag
