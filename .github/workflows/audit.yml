@@ -16,7 +16,6 @@ jobs:
         min-score: 75
         log-level: DEBUG
         json-report: report.json
-        share-everyone: READ_WRITE
     - uses: didushko/42CrunchConformanceScanAction@v1
       with:
         api-token: ${{ secrets.API_TOKEN }}
