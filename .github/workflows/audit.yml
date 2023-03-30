@@ -17,3 +17,11 @@ jobs:
         log-level: DEBUG
         json-report: report.json
         share-everyone: READ_WRITE
+    - uses: didushko/42CrunchConformanceScanAction
+      with:
+        api-token: ${{ secrets.API_TOKEN }}
+        report-path: report.json
+    - uses: actions/upload-artifact@v2
+      with:
+        name: sarif-report
+        path: report.sarif
