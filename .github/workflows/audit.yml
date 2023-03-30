@@ -17,7 +17,7 @@ jobs:
         log-level: DEBUG
         json-report: report.json
         share-everyone: READ_WRITE
-    - uses: didushko/42CrunchConformanceScanAction@V1
+    - uses: didushko/42CrunchConformanceScanAction@v1
       with:
         api-token: ${{ secrets.API_TOKEN }}
         report-path: report.json
