@@ -265,7 +265,7 @@
             "pattern": "^[\\w\\-+.]+@((\\w\\-?)+\\.){1,4}[a-zA-Z0-9]{2,63}$",
             "type": "string",
             "format": "email",
-            "example": "foo@bar.com",
+            "example": "foo4352x@bar.com",
             "x-42c-format": "o:email"
           },
           "name": {
@@ -287,9 +287,9 @@
         "type": "object",
         "additionalProperties": false,
         "example": {
-          "user": "foo55235@test.com",
+          "user": "foo4352x@test.com",
           "pass": "mygood2!pass",
-          "name": "Pixi55235User",
+          "name": "Pixi4352xUser",
           "is_admin": false,
           "account_balance": 150
         },
@@ -300,7 +300,7 @@
             "pattern": "^[\\w\\-+.]+@((\\w\\-?)+\\.){1,4}[a-zA-Z0-9]{2,63}$",
             "type": "string",
             "format": "email",
-            "example": "foo@bar.com",
+            "example": "foo4352x@bar.com",
             "x-42c-format": "o:email"
           },
           "pass": {
