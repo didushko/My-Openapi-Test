@@ -10,6 +10,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - uses: 42Crunch/api-security-audit-action@v3
+      with:
+        api-token: ${{ secrets.API_TOKEN }}
+        min-score: 75
+        log-level: DEBUG
+        json-report: report.json
+    - uses: didushko/42CrunchConformanceScanAction@v1
+      with:
+        api-token: ${{ secrets.API_TOKEN }}
+        report-path: report.json
         
     - uses: actions/upload-artifact@v2
       with:
