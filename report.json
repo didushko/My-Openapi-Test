@@ -1,0 +1,20 @@
+{
+    "audit": {
+      "report": {
+        "temp-api.json": {
+          "audited": true,
+          "apiId": "2ced5121-f306-4f67-89e5-303d121f97f8",
+          "mode": "discovery",
+          "score": 0,
+          "failures": [
+            "The API score 0 is lower than the set minimum score of 75",
+            "The OpenAPI definition is not valid",
+            "The API failed the security quality gate \"default\" - OpenAPI definition is not valid",
+            "The API failed the security quality gate \"default\" - minimum audit score not reached: the audit sqg expects 70, got 0"
+          ],
+          "lifecycle": "created"
+        }
+      }
+    }
+  }
+  
