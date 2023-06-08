@@ -1,9 +1,9 @@
 {
   "audit": {
     "report": {
-      "temp-api.json": {
+      "MyApi/testDir/Pixi_RemediatedVersion.json": {
         "audited": true,
-        "apiId": "2ced5121-f306-4f67-89e5-303d121f97f8",
+        "apiId": "eae199ad-60b5-460a-ba1f-6323ee25d67a",
         "mode": "discovery",
         "score": 0,
         "failures": [
@@ -15,7 +15,7 @@
         "lifecycle": "created"
       },
       "temp-api2.json": {
-        "audited": true,
+        "audited": false,
         "apiId": "2ced5121-f306-4f67-89e5-303d121f97f8",
         "mode": "discovery",
         "score": 0,
