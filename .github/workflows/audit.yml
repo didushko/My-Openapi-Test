@@ -17,28 +17,28 @@ jobs:
     #     min-score: 75
     #     log-level: DEBUG
     #     json-report: report.json
-    - uses: didushko/42CrunchConformanceScanAction@v2
-      with:
-        api-token: ${{ secrets.API_TOKEN }}
-        platform-url: https://platform.dev.42crunch.com
-        command: xliic_scan json-report convert-to-sarif $report_path $sarif_path
-        report-path: report.json
+    # - uses: didushko/42CrunchConformanceScanAction@v2
+    #   with:
+    #     api-token: ${{ secrets.API_TOKEN }}
+    #     platform-url: https://platform.dev.42crunch.com
+    #     command: xliic_scan json-report convert-to-sarif $report_path $sarif_path
+    #     report-path: report.json
         
     - uses: actions/upload-artifact@v2
       with:
         name: sarif-report
-        path: report.sarif
+        path: sarif.json
         
     - uses: github/codeql-action/upload-sarif@v2
       with:
         # Path to SARIF file relative to the root of the repository
-        sarif_file: report.sarif
+        sarif_file: sarif.json
         # Optional category for the results
         # Used to differentiate multiple results for one commit
         category: my-analysis-tool
 
-    - uses: didushko/42CrunchConformanceScanAction@v2
-      with:
-        api-token: ${{ secrets.API_TOKEN }}
-        platform-url: https://platform.dev.42crunch.com
-        report-path: report.json
+    # - uses: didushko/42CrunchConformanceScanAction@v2
+    #   with:
+    #     api-token: ${{ secrets.API_TOKEN }}
+    #     platform-url: https://platform.dev.42crunch.com
+    #     report-path: report.json
