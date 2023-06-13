@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: didushko/api-security-audit-action@write_sarif
+    - uses: didushko/api-security-audit-action
       with:
         api-token: ${{ secrets.API_TOKEN }}
         platform-url: https://platform.dev.42crunch.com
