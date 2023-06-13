@@ -16,7 +16,7 @@ jobs:
         platform-url: https://platform.dev.42crunch.com
         min-score: 75
         log-level: DEBUG
-        json-report: report.json
+#         json-report: report.json
         sarif-report: report
     # - uses: didushko/42CrunchConformanceScanAction@v2
     #   with:
