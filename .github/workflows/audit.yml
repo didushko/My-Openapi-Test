@@ -17,7 +17,7 @@ jobs:
         min-score: 75
         log-level: DEBUG
 #         json-report: report.json
-        sarif-report: report
+        sarif-report: asd/afasf/asdf
     # - uses: didushko/42CrunchConformanceScanAction@v2
     #   with:
     #     api-token: ${{ secrets.API_TOKEN }}
