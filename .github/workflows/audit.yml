@@ -5,19 +5,19 @@ name: Github Action 42Crunch REST API Static Security Testing
 on: push
 
 jobs:
-  audit:
-    runs-on: ubuntu-latest
+#   audit:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v3
-    - uses: didushko/api-security-audit-action@write_sarif
-      with:
-        api-token: ${{ secrets.API_TOKEN }}
-        platform-url: https://platform.dev.42crunch.com
-        min-score: 75
-        log-level: DEBUG
-#         json-report: report.json
-        max-wait-time: 0
+#     steps:
+#     - uses: actions/checkout@v3
+#     - uses: didushko/api-security-audit-action@write_sarif
+#       with:
+#         api-token: ${{ secrets.API_TOKEN }}
+#         platform-url: https://platform.dev.42crunch.com
+#         min-score: 75
+#         log-level: DEBUG
+# #         json-report: report.json
+#         max-wait-time: 0
     # - uses: didushko/42CrunchConformanceScanAction@v2
     #   with:
     #     api-token: ${{ secrets.API_TOKEN }}
@@ -25,10 +25,10 @@ jobs:
     #     command: xliic_scan json-report convert-to-sarif $report_path $sarif_path
     #     report-path: report.json
         
-#     - uses: actions/upload-artifact@v2
-#       with:
-#         name: sarif-report
-#         path: sarif.json
+    - uses: actions/upload-artifact@v2
+      with:
+        name: sarif-report
+        path: sarif.json
         
 #     - uses: github/codeql-action/upload-sarif@v2
 #       with:
