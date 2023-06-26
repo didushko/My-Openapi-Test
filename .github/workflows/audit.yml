@@ -26,18 +26,18 @@ jobs:
     #     command: xliic_scan json-report convert-to-sarif $report_path $sarif_path
     #     report-path: report.json
         
-    - uses: actions/upload-artifact@v2
-      with:
-        name: sarif-report
-        path: sarif.json
-        
-    # - uses: github/codeql-action/upload-sarif@v2
+    # - uses: actions/upload-artifact@v2
     #   with:
-    #     # Path to SARIF file relative to the root of the repository
-    #     sarif_file: sarif.json
-    #     # Optional category for the results
-    #     # Used to differentiate multiple results for one commit
-    #     category: my-analysis-tool
+    #     name: sarif-report
+    #     path: sarif.json
+        
+    - uses: github/codeql-action/upload-sarif@v2
+      with:
+        # Path to SARIF file relative to the root of the repository
+        sarif_file: sarif.json
+        # Optional category for the results
+        # Used to differentiate multiple results for one commit
+        category: my-analysis-tool
 
     # - uses: didushko/42CrunchConformanceScanAction@v2
     #   with:
