@@ -10,14 +10,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-#     - uses: didushko/api-security-audit-action@write_sarif
-#       with:
-#         api-token: ${{ secrets.API_TOKEN }}
-#         platform-url: https://platform.dev.42crunch.com
-#         min-score: 75
-#         log-level: DEBUG
-# #         json-report: report.json
-#         max-wait-time: 0
+    - uses: didushko/api-security-audit-action@write_sarif
+      with:
+        api-token: ${{ secrets.API_TOKEN }}
+        platform-url: https://platform.dev.42crunch.com
+        min-score: 75
+        log-level: DEBUG
+#         json-report: report.json
+        max-wait-time: 0
+        upload-to-code-scanning: true
     # - uses: didushko/42CrunchConformanceScanAction@v2
     #   with:
     #     api-token: ${{ secrets.API_TOKEN }}
@@ -30,13 +31,13 @@ jobs:
 #         name: sarif-report
 #         path: sarif.json
         
-    - uses: github/codeql-action/upload-sarif@v2
-      with:
-        # Path to SARIF file relative to the root of the repository
-        sarif_file: sarif.json
-        # Optional category for the results
-        # Used to differentiate multiple results for one commit
-        category: my-analysis-tool
+    # - uses: github/codeql-action/upload-sarif@v2
+    #   with:
+    #     # Path to SARIF file relative to the root of the repository
+    #     sarif_file: sarif.json
+    #     # Optional category for the results
+    #     # Used to differentiate multiple results for one commit
+    #     category: my-analysis-tool
 
     # - uses: didushko/42CrunchConformanceScanAction@v2
     #   with:
