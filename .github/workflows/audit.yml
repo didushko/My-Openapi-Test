@@ -20,6 +20,10 @@ jobs:
         sarif-report: sarif.sarif
         audit-timeout: 6
         # upload-to-code-scanning: true
+    - uses: actions/upload-artifact@v2
+      with:
+        name: sarif-report
+        path: MyApi/testDir/sarif.sarif
 
     - uses: github/codeql-action/upload-sarif@v2
       with:
