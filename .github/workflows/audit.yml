@@ -8,7 +8,7 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: 42Crunch/api-security-audit-action@v3
     - uses: didushko/api-security-audit-action@master
       with:
         api-token: ${{ secrets.API_TOKEN }}
@@ -20,6 +20,7 @@ jobs:
         # sarif-report: sarif.sarif
         audit-timeout: 6
         upload-to-code-scanning: true
+
     # - uses: actions/upload-artifact@v2
     #   with:
     #     name: sarif-report
