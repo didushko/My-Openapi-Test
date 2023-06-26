@@ -19,7 +19,8 @@
                             },
                             "properties": {
                                 "owapIssue": "Security Misconfiguration",
-                                "category": "Other"
+                                "category": "Other",
+                                "security-severity" : "9.8"
                             }
                         },
                         {
@@ -33,7 +34,8 @@
                             },
                             "properties": {
                                 "owapIssue": "No OWASP issues found",
-                                "category": "Other"
+                                "category": "Other",
+                                "security-severity" : "9.8"
                             }
                         },
                         {
@@ -47,7 +49,8 @@
                             },
                             "properties": {
                                 "owapIssue": "Injection",
-                                "category": "Other"
+                                "category": "Other",
+                                "security-severity" : "9.8"
                             }
                         },
                         {
@@ -61,7 +64,8 @@
                             },
                             "properties": {
                                 "owapIssue": "No OWASP issues found",
-                                "category": "Other"
+                                "category": "Other",
+                                "security-severity" : "9.8"
                             }
                         },
                         {
@@ -75,7 +79,8 @@
                             },
                             "properties": {
                                 "owapIssue": "No OWASP issues found",
-                                "category": "Other"
+                                "category": "Other",
+                                "security-severity" : "9.8"
                             }
                         },
                         {
@@ -89,7 +94,8 @@
                             },
                             "properties": {
                                 "owapIssue": "No OWASP issues found",
-                                "category": "Other"
+                                "category": "Other",
+                                "security-severity" : "9.8"
                             }
                         },
                         {
@@ -103,7 +109,8 @@
                             },
                             "properties": {
                                 "owapIssue": "Injection",
-                                "category": "Other"
+                                "category": "Other",
+                                "security-severity" : "9.8"
                             }
                         },
                         {
@@ -117,7 +124,8 @@
                             },
                             "properties": {
                                 "owapIssue": "Injection",
-                                "category": "Other"
+                                "category": "Other",
+                                "security-severity" : "9.8"
                             }
                         },
                         {
@@ -131,7 +139,8 @@
                             },
                             "properties": {
                                 "owapIssue": "No OWASP issues found",
-                                "category": "Other"
+                                "category": "Other",
+                                "security-severity" : "9.8"
                             }
                         },
                         {
@@ -145,7 +154,8 @@
                             },
                             "properties": {
                                 "owapIssue": "Injection",
-                                "category": "Other"
+                                "category": "Other",
+                                "security-severity" : "9.8"
                             }
                         }
                     ]
@@ -153,7 +163,6 @@
             },
             "results": [
                 {
-                    "level": "Critical",
                     "ruleId": "path-item-method-not-allowed-scan",
                     "message": {
                         "text": "The request is generated with the verb \u2018[get]\u2019 that is not defined in the OpenAPI definition of the API"
@@ -175,7 +184,6 @@
                     "ruleIndex": 1
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "path-item-method-not-allowed-scan",
                     "message": {
                         "text": "The request is generated with the verb \u2018[put]\u2019 that is not defined in the OpenAPI definition of the API"
@@ -197,7 +205,6 @@
                     "ruleIndex": 1
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "schema-type-wrong-number-scan",
                     "message": {
                         "text": "The generated value is of the type number instead of the type \u2018[object]\u2019"
@@ -219,7 +226,6 @@
                     "ruleIndex": 2
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "schema-type-wrong-array-scan",
                     "message": {
                         "text": "The generated value is of the type array instead of the type \u2018[object]\u2019"
@@ -241,7 +247,6 @@
                     "ruleIndex": 3
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "schema-type-wrong-bool-scan",
                     "message": {
                         "text": "The generated value is of the type boolean instead of the type \u2018[object]\u2019"
@@ -263,7 +268,6 @@
                     "ruleIndex": 4
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "schema-type-wrong-string-scan",
                     "message": {
                         "text": "The generated value is of the type string instead of the type \u2018[object]\u2019"
@@ -285,7 +289,6 @@
                     "ruleIndex": 5
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "schema-type-wrong-integer-scan",
                     "message": {
                         "text": "The generated value is of the type integer instead of the type \u2018[object]\u2019"
@@ -307,7 +310,6 @@
                     "ruleIndex": 6
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "schema-required-scan",
                     "message": {
                         "text": "The required property \u2018[pass]\u2019 is missing in the generated object"
@@ -329,7 +331,6 @@
                     "ruleIndex": 7
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "schema-required-scan",
                     "message": {
                         "text": "The required property \u2018[user]\u2019 is missing in the generated object"
@@ -351,7 +352,6 @@
                     "ruleIndex": 7
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "schema-pattern-scan",
                     "message": {
                         "text": "The generated value does not follow the property pattern for strings"
@@ -373,7 +373,6 @@
                     "ruleIndex": 8
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "schema-minlength-scan",
                     "message": {
                         "text": "The generated value does not follow the property minLength for strings"
@@ -395,7 +394,6 @@
                     "ruleIndex": 9
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "schema-maxlength-scan",
                     "message": {
                         "text": "The generated value does not follow the property maxLength for strings"
@@ -417,7 +415,6 @@
                     "ruleIndex": 10
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "schema-type-wrong-array-scan",
                     "message": {
                         "text": "The generated value is of the type array instead of the type \u2018[string]\u2019"
@@ -439,7 +436,6 @@
                     "ruleIndex": 3
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "path-item-method-not-allowed-scan",
                     "message": {
                         "text": "The request is generated with the verb \u2018[delete]\u2019 that is not defined in the OpenAPI definition of the API"
@@ -461,7 +457,6 @@
                     "ruleIndex": 1
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "path-item-method-not-allowed-scan",
                     "message": {
                         "text": "The request is generated with the verb \u2018[options]\u2019 that is not defined in the OpenAPI definition of the API"
@@ -483,7 +478,6 @@
                     "ruleIndex": 1
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "path-item-method-not-allowed-scan",
                     "message": {
                         "text": "The request is generated with the verb \u2018[head]\u2019 that is not defined in the OpenAPI definition of the API"
@@ -505,7 +499,6 @@
                     "ruleIndex": 1
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "path-item-method-not-allowed-scan",
                     "message": {
                         "text": "The request is generated with the verb \u2018[patch]\u2019 that is not defined in the OpenAPI definition of the API"
@@ -527,7 +520,6 @@
                     "ruleIndex": 1
                 },
                 {
-                    "level": "Critical",
                     "ruleId": "path-item-method-not-allowed-scan",
                     "message": {
                         "text": "The request is generated with the verb \u2018[trace]\u2019 that is not defined in the OpenAPI definition of the API"
