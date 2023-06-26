@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: 42Crunch/api-security-audit-action@v3
-    - uses: didushko/api-security-audit-action@master
+    # - uses: didushko/api-security-audit-action@master
       with:
         api-token: ${{ secrets.API_TOKEN }}
         platform-url: https://platform.dev.42crunch.com
