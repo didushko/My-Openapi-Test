@@ -16,8 +16,9 @@ jobs:
         min-score: 75
         log-level: DEBUG
 #         json-report: report.json
+        sarif-report: sarif.json
         audit-timeout: 6
-        upload-to-code-scanning: true
+        # upload-to-code-scanning: true
     # - uses: didushko/42CrunchConformanceScanAction@v2
     #   with:
     #     api-token: ${{ secrets.API_TOKEN }}
@@ -25,10 +26,10 @@ jobs:
     #     command: xliic_scan json-report convert-to-sarif $report_path $sarif_path
     #     report-path: report.json
         
-#     - uses: actions/upload-artifact@v2
-#       with:
-#         name: sarif-report
-#         path: sarif.json
+    - uses: actions/upload-artifact@v2
+      with:
+        name: sarif-report
+        path: sarif.json
         
     # - uses: github/codeql-action/upload-sarif@v2
     #   with:
