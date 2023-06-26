@@ -15,25 +15,25 @@ jobs:
         api-token: ${{ secrets.API_TOKEN }}
         platform-url: https://platform.dev.42crunch.com
         min-score: 75
-        # root-directory: MyApi/testDir
+        root-directory: MyApi/testDir
         log-level: DEBUG
         # json-report: report.json
-        # sarif-report: sarif.sarif
+        sarif-report: sarif.sarif
         audit-timeout: 6
-        upload-to-code-scanning: true
+        # upload-to-code-scanning: true
 
-    # - uses: actions/upload-artifact@v2
-    #   with:
-    #     name: sarif-report
-    #     path: MyApi/testDir/sarif.sarif
+    - uses: actions/upload-artifact@v2
+      with:
+        name: sarif-report
+        path: MyApi/testDir/sarif.sarif
 
-    # - uses: github/codeql-action/upload-sarif@v2
-    #   with:
-    #     # Path to SARIF file relative to the root of the repository
-    #     sarif_file: MyApi/testDir/sarif.sarif
-    #     # Optional category for the results
-    #     # Used to differentiate multiple results for one commit
-    #     category: my-analysis-tool
+    - uses: github/codeql-action/upload-sarif@v2
+      with:
+        # Path to SARIF file relative to the root of the repository
+        sarif_file: MyApi/testDir/sarif.sarif
+        # Optional category for the results
+        # Used to differentiate multiple results for one commit
+        category: my-analysis-tool
 
 
     # - uses: didushko/42CrunchConformanceScanAction@v2
