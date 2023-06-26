@@ -14,7 +14,7 @@ jobs:
         api-token: ${{ secrets.API_TOKEN }}
         platform-url: https://platform.dev.42crunch.com
         min-score: 75
-        root-dir: testDir
+        root-directory: testDir
         log-level: DEBUG
         # json-report: report.json
         sarif-report: sarif.sarif
