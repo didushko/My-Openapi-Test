@@ -54,9 +54,7 @@ jobs:
         api-token: ${{ secrets.API_TOKEN }}
         platform-url: https://platform.dev.42crunch.com
         # audit-report-path: report.json
-        api-ids: |
-          c6766392-a263-4f07-8461-7da1f3e24a16
-          c6766392-a263-4f07-8461-7da1f3e24a17
+        api-ids: c6766392-a263-4f07-8461-7da1f3e24a16, c6766392-a263-4f07-8461-7da1f3e24a17
 
     # - uses: 42Crunch/api-conformance-scan-action/convert-to-sarif@v1
     #   with:
