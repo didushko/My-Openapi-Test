@@ -48,16 +48,16 @@ jobs:
     #     name: sarif-report
     #     path: sarif.json
 
-    # - uses: 42Crunch/api-conformance-scan-action/check-sqg@Multiactions
-    #   if: always()
-    #   with:
-    #     api-token: ${{ secrets.API_TOKEN }}
-    #     platform-url: https://platform.dev.42crunch.com
-    #     audit-report-path: report.json
-    #     api-ids: e0128c1f-dfc3-4dfe-9206-c9b2c9b9071f
+    - uses: 42Crunch/api-conformance-scan-action/check-sqg@master
+      if: always()
+      with:
+        api-token: ${{ secrets.API_TOKEN }}
+        platform-url: https://platform.dev.42crunch.com
+        audit-report-path: report.json
+        api-ids: e0128c1f-dfc3-4dfe-9206-c9b2c9b9071f
 
 
-    - uses: 42Crunch/api-conformance-scan-action/convert-to-sarif@Multiactions
+    - uses: 42Crunch/cicd-github-actions/convert-to-sarif@master
       with:
         api-token: ${{ secrets.API_TOKEN }}
         platform-url: https://platform.dev.42crunch.com
