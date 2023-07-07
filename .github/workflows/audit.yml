@@ -10,17 +10,17 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     # - uses: 42Crunch/api-security-audit-action@v3
-    # - uses: didushko/api-security-audit-action@master
-    #   with:
-    #     api-token: ${{ secrets.API_TOKEN }}
-    #     platform-url: https://platform.dev.42crunch.com
-    #     min-score: 75
-    #     # root-directory: MyApi/testDir
-    #     log-level: DEBUG
-    #     json-report: report.json
-    #     # sarif-report: sarif.sarif
-    #     audit-timeout: 6
-    #     upload-to-code-scanning: true
+    - uses: didushko/api-security-audit-action@master
+      with:
+        api-token: ${{ secrets.API_TOKEN_PROM }}
+        # platform-url: https://platform.dev.42crunch.com
+        min-score: 75
+        # root-directory: MyApi/testDir
+        log-level: DEBUG
+        # json-report: report.json
+        # sarif-report: sarif.sarif
+        audit-timeout: 6
+        # upload-to-code-scanning: true
 
     # - uses: actions/upload-artifact@v2
     #   with:
@@ -48,30 +48,30 @@ jobs:
     #     name: sarif-report
     #     path: sarif.json
 
-    - uses: 42Crunch/api-conformance-scan-action/check-sqg@master
-      if: always()
-      with:
-        api-token: ${{ secrets.API_TOKEN }}
-        platform-url: https://platform.dev.42crunch.com
-        audit-report-path: report.json
-        api-ids: e0128c1f-dfc3-4dfe-9206-c9b2c9b9071f
+    # - uses: 42Crunch/api-conformance-scan-action/check-sqg@master
+    #   if: always()
+    #   with:
+    #     api-token: ${{ secrets.API_TOKEN }}
+    #     platform-url: https://platform.dev.42crunch.com
+    #     audit-report-path: report.json
+    #     api-ids: e0128c1f-dfc3-4dfe-9206-c9b2c9b9071f
 
 
-    - uses: 42Crunch/cicd-github-actions/convert-to-sarif@master
-      with:
-        api-token: ${{ secrets.API_TOKEN }}
-        platform-url: https://platform.dev.42crunch.com
-        audit-report-path: report.json
-        sarif-path: report-scan.sarif
-        # api-ids: e0128c1f-dfc3-4dfe-9206-c9b2c9b9071f
+    # - uses: 42Crunch/cicd-github-actions/convert-to-sarif@master
+    #   with:
+    #     api-token: ${{ secrets.API_TOKEN }}
+    #     platform-url: https://platform.dev.42crunch.com
+    #     audit-report-path: report.json
+    #     sarif-path: report-scan.sarif
+    #     # api-ids: e0128c1f-dfc3-4dfe-9206-c9b2c9b9071f
 
-    - uses: github/codeql-action/upload-sarif@v2
-      with:
-        # Path to SARIF file relative to the root of the repository
-        sarif_file: report-scan.sarif
-        # Optional category for the results
-        # Used to differentiate multiple results for one commit
-        category: my-analysis-tool
+    # - uses: github/codeql-action/upload-sarif@v2
+    #   with:
+    #     # Path to SARIF file relative to the root of the repository
+    #     sarif_file: report-scan.sarif
+    #     # Optional category for the results
+    #     # Used to differentiate multiple results for one commit
+    #     category: my-analysis-tool
 # 
   # upload:
   #   runs-on: ubuntu-latest
