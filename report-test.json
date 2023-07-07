@@ -3,7 +3,7 @@
     "report": {
       "MyApi/testDir/Pixi_RemediatedVersion.json": {
         "audited": true,
-        "apiId": "eae199ad-60b5-460a-ba1f-6323ee25d67a",
+        "apiId": "a59d38b4-580a-42ee-9b64-1e5421d87567",
         "mode": "discovery",
         "score": 0,
         "failures": [
