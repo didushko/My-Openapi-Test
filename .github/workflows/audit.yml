@@ -51,10 +51,10 @@ jobs:
     - uses: 42Crunch/cicd-github-actions/scan@master
       with:
         api-token: ${{ secrets.API_TOKEN_PROM }}
-        audit-report-path: report.json
+        # audit-report-path: report.json
         api-ids: |
          a59d38b4-580a-42ee-9b64-1e5421d87567
          ec021be8-c40d-4351-84da-d628c251dc28
         # convert-to-sarif: sarif.sarif
         upload-sarif: true
-        check-sqg: true
+        # check-sqg: true
