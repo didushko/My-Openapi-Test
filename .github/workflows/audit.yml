@@ -9,18 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    # - uses: 42Crunch/api-security-audit-action@v3
-    # - uses: didushko/api-security-audit-action@master
-    #   with:
-    #     api-token: ${{ secrets.API_TOKEN_PROM }}
-    #     # platform-url: https://platform.dev.42crunch.com
-    #     min-score: 75
-    #     # root-directory: MyApi/testDir
-    #     log-level: DEBUG
-    #     # json-report: report.json
-    #     # sarif-report: sarif.sarif
-    #     audit-timeout: 6
-    #     # upload-to-code-scanning: true
+    - uses: 42Crunch/api-security-audit-action@v3
+    - uses: didushko/api-security-audit-action@master
+      with:
+        api-token: ${{ secrets.API_TOKEN }}
+        platform-url: https://platform.dev.42crunch.com
+        min-score: 75
+        # root-directory: MyApi/testDir
+        log-level: DEBUG
+        # json-report: report.json
+        sarif-report: sarif.sarif
+        audit-timeout: 6
+        upload-to-code-scanning: true
 
     # - uses: actions/upload-artifact@v2
     #   with:
@@ -48,13 +48,13 @@ jobs:
     #     name: sarif-report
     #     path: sarif.json
 
-    - uses: 42Crunch/cicd-github-actions/scan@master
-      with:
-        api-token: ${{ secrets.API_TOKEN_PROM }}
-        # audit-report-path: report.json
-        api-ids: |
-         a59d38b4-580a-42ee-9b64-1e5421d87567
-         ec021be8-c40d-4351-84da-d628c251dc28
-        # convert-to-sarif: sarif.sarif
-        upload-sarif: true
-        # check-sqg: true
+    # - uses: 42Crunch/cicd-github-actions/scan@master
+    #   with:
+    #     api-token: ${{ secrets.API_TOKEN_PROM }}
+    #     # audit-report-path: report.json
+    #     api-ids: |
+    #      a59d38b4-580a-42ee-9b64-1e5421d87567
+    #      ec021be8-c40d-4351-84da-d628c251dc28
+    #     # convert-to-sarif: sarif.sarif
+    #     upload-sarif: true
+    #     # check-sqg: true
