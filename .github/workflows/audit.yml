@@ -9,31 +9,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: 42Crunch/api-security-audit-action@v3
-    - uses: didushko/api-security-audit-action@master
-      with:
-        api-token: ${{ secrets.API_TOKEN }}
-        platform-url: https://platform.dev.42crunch.com
-        min-score: 75
-        # root-directory: MyApi/testDir
-        log-level: DEBUG
-        # json-report: report.json
-        sarif-report: sarif.sarif
-        audit-timeout: 6
-        upload-to-code-scanning: true
+    # - uses: didushko/api-security-audit-action@master
+    #   with:
+    #     api-token: ${{ secrets.API_TOKEN }}
+    #     platform-url: https://platform.dev.42crunch.com
+    #     min-score: 75
+    #     # root-directory: MyApi/testDir
+    #     log-level: DEBUG
+    #     # json-report: report.json
+    #     sarif-report: sarif.sarif
+    #     audit-timeout: 6
+    #     upload-to-code-scanning: true
 
     # - uses: actions/upload-artifact@v2
     #   with:
     #     name: sarif-report
-    #     path: MyApi/testDir/sarif.sarif
+    #     path: sarif.sarif
 
-    # - uses: github/codeql-action/upload-sarif@v2
-    #   with:
-    #     # Path to SARIF file relative to the root of the repository
-    #     sarif_file: MyApi/testDir/sarif.sarif
-    #     # Optional category for the results
-    #     # Used to differentiate multiple results for one commit
-    #     category: my-analysis-tool
+    - uses: github/codeql-action/upload-sarif@v2
+      with:
+        # Path to SARIF file relative to the root of the repository
+        sarif_file: sarif.sarif
+        # Optional category for the results
+        # Used to differentiate multiple results for one commit
+        category: my-analysis-tool
 
 
     # - uses: didushko/42CrunchConformanceScanAction@v2
